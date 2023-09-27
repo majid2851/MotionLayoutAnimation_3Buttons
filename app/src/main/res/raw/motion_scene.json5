@@ -1,0 +1,73 @@
+{
+  ConstraintSets:
+  {
+    start:
+    {
+      button1: {
+        width: 110,
+        height: 60,
+        start: ['parent', 'start', 16],
+        end: ['button2', 'start', 8],
+
+      },
+      button2: {
+        width: 110,
+        height: 60,
+        start: ['button1', 'end', 8],
+        end: ['button3', 'start', 8],
+      },
+      button3: {
+        width: 110,
+        height: 60,
+        start: ['button2', 'end', 8],
+        end: ['parent', 'end', 8],
+      }
+
+    },
+
+    end:
+    {
+      button1:
+      {
+        width: 'spread',
+        height: 60,
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top', 16],
+      },
+      button2:
+      {
+        width: 'spread',
+        height: 60,
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['button1', 'bottom', 8]
+      },
+      button3:
+      {
+        width: 'spread',
+        height: 60,
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['button2', 'bottom', 8]
+      }
+
+
+
+
+
+    }
+  },
+
+  Transitions:
+  {
+    default:
+    {
+
+    },
+
+  }
+
+
+
+}
